@@ -1,0 +1,8 @@
+.autotools
+.cproject
+.project
+.pydevproject
+*.pyc
+.idea/
+*.*~
+*.swp
