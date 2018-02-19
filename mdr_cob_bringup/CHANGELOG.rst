@@ -4,7 +4,7 @@ Changelog for package mdr_bringup
 
 1.2.0 (2017-11-04)
 ------------------
-* Uncommented the LifeCam launcher 
+* Uncommented the LifeCam launcher
 * Contributors: Alex Mitrevski
 
 1.1.2 (2017-10-29)
@@ -31,6 +31,12 @@ Changelog for package mdr_bringup
 
 1.0.0 (2017-04-11)
 ------------------
+* Fix back table position of the head
+* Change torso and head buttons
+* Remove arm buttons
+* Update configs for cob3-1
+* Add missing find_package
+* Move mdr_default_robot_config package to the mdr_robots meta-package
 * Fix openni2 launch file
 * Do not launch the USB cam nice it crashes quite often and it is not used currently
 * Fix ending include tag
@@ -84,4 +90,5 @@ Changelog for package mdr_bringup
 * Add robot bringups
 * Add bringup components
 * Add bringup package
+* Added mdr_robots meta-package
 * Contributors: Frederik Hegger, Hans Wurst, Shehzad Ahmed, Sven Schneider, Jose Sanchez, Matthias Füller
