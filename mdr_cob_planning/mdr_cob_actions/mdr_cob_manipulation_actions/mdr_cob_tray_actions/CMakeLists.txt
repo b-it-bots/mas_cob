@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(mdr_move_tray_action)
+project(mdr_cob_tray_actions)
 
 find_package(catkin REQUIRED COMPONENTS
   actionlib

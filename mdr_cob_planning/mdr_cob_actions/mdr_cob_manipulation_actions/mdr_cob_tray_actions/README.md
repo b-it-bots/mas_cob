@@ -1,4 +1,4 @@
-# mdr_move_tray_action
+# mdr_cob_tray_actions
 
 An action for moving Jenny's tray up or down.
 
