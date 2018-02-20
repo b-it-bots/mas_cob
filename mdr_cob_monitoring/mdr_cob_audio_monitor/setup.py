@@ -4,8 +4,8 @@ from distutils.core import setup
 from catkin_pkg.python_setup import generate_distutils_setup
 
 d = generate_distutils_setup(
-   packages=['mdr_audio_monitor'],
-   package_dir={'mdr_audio_monitor': 'ros/src/mdr_audio_monitor'}
+   packages=['mdr_cob_audio_monitor'],
+   package_dir={'mdr_cob_audio_monitor': 'ros/src/mdr_cob_audio_monitor'}
 )
 
 setup(**d)

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(mdr_audio_monitor)
+project(mdr_cob_audio_monitor)
 
 find_package(catkin REQUIRED COMPONENTS rospy mdr_monitoring_msgs)
 
@@ -10,7 +10,7 @@ catkin_package(
 )
 
 install(PROGRAMS
-  ros/scripts/mdr_audio_node
-  ros/src/mdr_audio_monitor/mdr_audio_monitor.py
+  ros/scripts/audio_monitor_node
+  ros/src/mdr_cob_audio_monitor/audio_monitor.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

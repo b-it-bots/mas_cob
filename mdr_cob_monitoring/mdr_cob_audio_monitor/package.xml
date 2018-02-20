@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>mdr_audio_monitor</name>
+  <name>mdr_cob_audio_monitor</name>
   <description>
     Monitor the status of the microphone and signal the state by LEDs.
   </description>
