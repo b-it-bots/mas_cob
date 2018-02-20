@@ -25,14 +25,14 @@ add_executable(emergency_stop_monitor
   ros/src/emergency_stop_monitor.cpp
 )
 
-target_link_libraries(mdr_cob_emergency_stop_monitor
+target_link_libraries(emergency_stop_monitor
   ${catkin_LIBRARIES}
 )
 
-add_dependencies(mdr_cob_emergency_stop_monitor
+add_dependencies(emergency_stop_monitor
   ${catkin_EXPORTED_TARGETS}
 )
 
-install(TARGETS mdr_cob_emergency_stop_monitor
+install(TARGETS emergency_stop_monitor
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
