@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import mas_cob_tactile_tools.grasp_evaluators
+
+if __name__ == '__main__':
+    mas_cob_tactile_tools.grasp_evaluators.main()

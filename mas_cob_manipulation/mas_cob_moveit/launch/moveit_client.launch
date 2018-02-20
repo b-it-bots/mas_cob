@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="mcr_moveit_client" type="moveit_client_node" name="moveit_client" output="screen">
+        <rosparam command="load" file="$(find mas_cob_moveit)/config/cob_moveit_client.yaml"/>
+    </node>
+</launch>

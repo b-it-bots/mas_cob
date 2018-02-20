@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <name>mas_cob_behaviors</name>
+  <version>1.2.0</version>
+  <description>behaviors related package</description>
+  <maintainer email="robotics@inf.h-brs.de">MAS robotics</maintainer>
+
+  <license>GPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <export>
+    <metapackage/>
+  </export>
+</package>
