@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>mdr_emergency_stop_monitor</name>
+  <name>mdr_cob_emergency_stop_monitor</name>
   <description>
      monitor that observe the emergency state and publish a topic to the say service
   </description>

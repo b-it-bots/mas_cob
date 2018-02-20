@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(mdr_emergency_stop_monitor)
+project(mdr_cob_emergency_stop_monitor)
 
 find_package(catkin REQUIRED
   COMPONENTS
@@ -21,18 +21,18 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(mdr_emergency_stop_monitor
-  ros/src/mdr_emergency_stop_monitor.cpp
+add_executable(emergency_stop_monitor
+  ros/src/emergency_stop_monitor.cpp
 )
 
-target_link_libraries(mdr_emergency_stop_monitor
+target_link_libraries(mdr_cob_emergency_stop_monitor
   ${catkin_LIBRARIES}
 )
 
-add_dependencies(mdr_emergency_stop_monitor
+add_dependencies(mdr_cob_emergency_stop_monitor
   ${catkin_EXPORTED_TARGETS}
 )
 
-install(TARGETS mdr_emergency_stop_monitor
+install(TARGETS mdr_cob_emergency_stop_monitor
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

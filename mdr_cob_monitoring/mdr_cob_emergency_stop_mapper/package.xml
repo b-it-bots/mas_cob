@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>mdr_emergency_stop_mapper</name>
+  <name>mdr_cob_emergency_stop_mapper</name>
   <version>1.2.0</version>
   <description>
     Translate the cob_msgs/EmergencyStopState to std_msgs.

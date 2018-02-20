@@ -41,9 +41,9 @@ void emergencyCallback(const cob_msgs::EmergencyStopState& data)
 
 int main(int argc, char **argv)
 {
-	ros::init(argc, argv, "mdr_emergency_stop_monitor");
+	ros::init(argc, argv, "mdr_cob_emergency_stop_monitor");
 	ros::NodeHandle n("~");
- 	
+
 	say_client = n.advertise<std_msgs::String>("say", 1, true);
 	ros::Subscriber emergency_sub = n.subscribe("/emergency_stop_state", 10, emergencyCallback);
 
@@ -52,4 +52,3 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-

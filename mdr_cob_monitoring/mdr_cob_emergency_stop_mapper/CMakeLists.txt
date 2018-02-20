@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(mdr_emergency_stop_mapper)
+project(mdr_cob_emergency_stop_mapper)
 
 find_package(catkin REQUIRED
   COMPONENTS
