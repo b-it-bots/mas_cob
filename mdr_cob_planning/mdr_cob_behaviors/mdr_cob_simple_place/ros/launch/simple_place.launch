@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-	<node pkg="mdr_simple_place" type="simple_place_node" name="place" respawn="false" output="screen">
+	<node pkg="mdr_cob_simple_place" type="simple_place_node" name="place" respawn="false" output="screen">
 		<remap from="joint_states" to="/joint_states" />
 		<remap from="get_ik" to="/compute_ik" />
 		<!--
@@ -9,7 +9,7 @@
 		<remap from="is_cylindric_grasped" to="/sdh_controller/is_cylindric_grasped" />
 		<remap from="grasp_posture_control" to="/mdr_manipulation/grasp_posture_control" />
 		-->
-		
+
 		<!-- the distance of the pre-grasp position to the object position (value given in meters) -->
 		<param name="pre_grasp_distance" value="0.35" />
 
