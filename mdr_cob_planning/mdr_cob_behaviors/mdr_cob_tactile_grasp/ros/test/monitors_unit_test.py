@@ -4,14 +4,15 @@ Test unit for the monitors.py module.
 
 """
 
-PKG = 'mdr_tactile_grasp'
 
 import unittest
 import rosunit
 import numpy
-import mdr_tactile_grasp.monitors
-import mdr_tactile_grasp_common.tactile_data_computation as tactile_computation
-import mdr_tactile_grasp_common.joints_computation as joints_computation
+import mdr_cob_tactile_grasp.monitors
+import mdr_cob_tactile_grasp_common.tactile_data_computation as tactile_computation
+import mdr_cob_tactile_grasp_common.joints_computation as joints_computation
+
+PKG = 'mdr_cob_tactile_grasp'
 
 
 class TestMonitors(unittest.TestCase):
@@ -22,7 +23,8 @@ class TestMonitors(unittest.TestCase):
 
     def test_detect_contact(self):
         """
-        Tests that the 'detect_contact' function returns correctly which phalanges are in contact and which are not in
+        Tests that the 'detect_contact' function returns correctly which
+        phalanges are in contact and which are not in
         contact, based on examples of contact matrices.
 
         """
@@ -54,7 +56,8 @@ class TestMonitors(unittest.TestCase):
 
     def test_detect_threshold(self):
         """
-        Tests that the 'detect_threshold' function returns correctly which phalanges should stop, based on examples of
+        Tests that the 'detect_threshold' function returns correctly which
+        phalanges should stop, based on examples of
         contact matrices and the contact thresholds.
 
         """
@@ -86,8 +89,9 @@ class TestMonitors(unittest.TestCase):
 
     def test_threshold_contact_matrices(self):
         """
-        Tests that the 'threshold_contact_matrices' function returns correctly the tactile matrices with the elements
-        that are below their contact threshold as zeros.
+        Tests that the 'threshold_contact_matrices' function returns correctly
+        the tactile matrices with the elements that are below their contact
+        threshold as zeros.
 
         """
         thresholds_1 = [20, 65, 50, 40, 40, 50]
@@ -193,8 +197,10 @@ class TestMonitors(unittest.TestCase):
 
     def test_generate_neighbors_4_connect(self):
         """
-       Tests that the 'test_generate_neighbors_4_connect' function returns correctly the west and north neighbors of
-       the current cell. If a cell does not exist a value of '-1' is assigned to it.
+       Tests that the 'test_generate_neighbors_4_connect' function returns
+       correctly the west and north neighbors of
+       the current cell. If a cell does not exist a value of '-1' is assigned
+       to it.
 
         """
         self.assertEqual(tactile_computation.generate_neighbors_4_connect(
@@ -214,8 +220,10 @@ class TestMonitors(unittest.TestCase):
 
     def test_generate_neighbors_8_connect(self):
         """
-       Tests that the 'generate_neighbors_8_connect' function returns correctly the west and north neighbors of
-       the current cell. If a cell does not exist a value of '-1' is assigned to it.
+       Tests that the 'generate_neighbors_8_connect' function returns correctly
+       the west and north neighbors of
+       the current cell. If a cell does not exist a value of '-1' is assigned
+       to it.
 
         """
         self.assertEqual(tactile_computation.generate_neighbors_8_connect(
@@ -239,8 +247,10 @@ class TestMonitors(unittest.TestCase):
 
     def test_merge_equivalent_regions(self):
         """
-       Tests that the 'merge_equivalent_regions' function correctly merges a list with labels, according to their
-       equivalences, e.g., if two labels are equivalent, the label with the lowest value gets assigned to the equivalent
+       Tests that the 'merge_equivalent_regions' function correctly merges a
+       list with labels, according to their
+       equivalences, e.g., if two labels are equivalent, the label with the
+       lowest value gets assigned to the equivalent
        greater label.
 
         """
@@ -261,7 +271,8 @@ class TestMonitors(unittest.TestCase):
 
     def test_generate_contact_regions(self):
         """
-        Tests that the 'generate_contact_regions' function correctly generates the contact regions given a filtered
+        Tests that the 'generate_contact_regions' function correctly generates
+        the contact regions given a filtered
         matrix.
 
         """
@@ -295,7 +306,8 @@ class TestMonitors(unittest.TestCase):
 
     def test_label_regions(self):
         """
-        Tests that the 'label_regions' function returns correctly the contact regions for each tactile
+        Tests that the 'label_regions' function returns correctly the contact
+        regions for each tactile
         matrix.
 
         """
@@ -446,7 +458,8 @@ class TestMonitors(unittest.TestCase):
 
     def test_extract_contact_region(self):
         """
-        Tests that the 'extract_contact_region' function returns correctly the largest contact region for each tactile
+        Tests that the 'extract_contact_region' function returns correctly the
+        largest contact region for each tactile
         matrix.
 
         """
@@ -537,7 +550,8 @@ class TestMonitors(unittest.TestCase):
 
     def test_calculate_contact_values(self):
         """
-        Tests that the 'calculate_contact_values' function returns correctly the contact pressure value in each contact
+        Tests that the 'calculate_contact_values' function returns correctly
+        the contact pressure value in each contact
         region for each tactile matrix.
 
         """
@@ -658,7 +672,8 @@ class TestMonitors(unittest.TestCase):
 
     def test_locate_contact_position(self):
         """
-        Tests that the 'locate_contact_position' function returns correctly in which cell the contact centroid is
+        Tests that the 'locate_contact_position' function returns correctly in
+        which cell the contact centroid is
         located for each tactile matrix.
 
         """
@@ -721,7 +736,7 @@ class TestMonitors(unittest.TestCase):
     def test_get_pressure_regions(self):
         """
         Tests that the 'get_pressure_regions' function returns correctly the
-        pressures for each contact region in a single contact matrix (phalange).
+        pressures for each contact region in a single contact matrix (phalange)
 
         """
         labels = [0, 3, 0, 0, 1, 0, 3, 3, 0, 0, 1, 1]
@@ -752,9 +767,11 @@ class TestMonitors(unittest.TestCase):
         normal force for each contact matrix.
 
         """
-        contact_matrices = [{1: [3000, 2000, 8000, 5000, 7000], 3: [4000, 5000, 6000]},
+        contact_matrices = [{1: [3000, 2000, 8000, 5000, 7000],
+                             3: [4000, 5000, 6000]},
                             {2: [5000, 6000], 3: [8000, 9000, 6000]}]
-        result = [{1: 23.6691, 3: 8.52087599}, {2: 4.165761599, 3: 13.06534319}]
+        result = [{1: 23.6691, 3: 8.52087599},
+                  {2: 4.165761599, 3: 13.06534319}]
 
         normal_forces = tactile_computation.calculate_normal_force(contact_matrices)
 
@@ -764,8 +781,8 @@ class TestMonitors(unittest.TestCase):
 
     def test_calculate_normal_force_zero_case(self):
         """
-        Tests that the 'calculate_normal_force' function returns a correct result
-        when an empty contact matrix is presented.
+        Tests that the 'calculate_normal_force' function returns a correct
+        result when an empty contact matrix is presented.
 
         """
         contact_matrices = [{}, {2: [5000, 6000], 3: [8000, 9000, 6000]}, {}]
@@ -783,7 +800,8 @@ class TestMonitors(unittest.TestCase):
         strongest region for each contact matrix.
 
         """
-        forces = [{1: 23.6691, 3: 8.52087599}, {2: 4.165761599, 3: 13.06534319}]
+        forces = [{1: 23.6691, 3: 8.52087599},
+                  {2: 4.165761599, 3: 13.06534319}]
         labels = [[0, 3, 0, 0, 1, 0, 3, 3, 0, 0, 1, 1], [2, 0, 0, 3, 2, 0, 3]]
         result = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 3, 0, 0, 3]]
 
@@ -796,8 +814,10 @@ class TestMonitors(unittest.TestCase):
         when an empty contact matrix is presented.
         """
         forces = [{}, {2: 4.165761599, 3: 13.06534319}, {}]
-        regions = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 0, 3, 2, 0, 3], [0, 0]]
-        result = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 3, 0, 0, 3], [0, 0]]
+        regions = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                   [2, 0, 0, 3, 2, 0, 3], [0, 0]]
+        result = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 0, 3, 0, 0, 3], [0, 0]]
 
         self.assertEqual(tactile_computation.get_strongest_regions(
             forces, regions), result)
@@ -831,7 +851,8 @@ class TestMonitors(unittest.TestCase):
     def test_detect_limit_positions_inner_stop(self):
         """
         Tests that the 'detect_limit_positions' function returns correctly that
-        the inner (proximal) phalanges have exceeded the limits of their joint position.
+        the inner (proximal) phalanges have exceeded the limits of their joint
+        position.
 
         """
         current_positions = [0.0, -0.3854, 0.9472, -0.5, 0.9472, -0.3854, 0.9472]
@@ -844,7 +865,8 @@ class TestMonitors(unittest.TestCase):
     def test_detect_limit_positions_outer_stop(self):
         """
         Tests that the 'detect_limit_positions' function returns correctly that
-        outer (distal) phalanges have exceeded the limits of their joint position.
+        outer (distal) phalanges have exceeded the limits of their joint
+        position.
 
         """
         current_positions = [0.0, -0.6854, 1.0472, -0.6854, 1.0472, -0.6854, 1.0472]

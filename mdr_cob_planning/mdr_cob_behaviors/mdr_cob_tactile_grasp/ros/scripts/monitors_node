@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import mdr_cob_tactile_grasp.monitors
+
+if __name__ == '__main__':
+    mdr_cob_tactile_grasp.monitors.main()
