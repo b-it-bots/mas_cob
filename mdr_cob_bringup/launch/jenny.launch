@@ -2,12 +2,11 @@
 <launch>
 
     <param name="/use_sim_time" value="false"/>
-    <arg name="robot" default="$(optenv ROBOT !!NO_ROBOT_SET!!)"/>
     <arg name="robot_env" default="$(optenv ROBOT_ENV !!NO_ROBOT_ENV_SET!!)"/>
     <arg name="pkg_env_config" default="$(find mcr_default_env_config)"/>
 
     <!-- startup hardware -->
-    <include file="$(find cob_bringup)/robots/$(arg robot).launch">
+    <include file="$(find cob_bringup)/robots/cob3-1.launch">
         <arg name="env_script" value="$(find mdr_cob_bringup)/config/env.sh" />
     </include>
 
