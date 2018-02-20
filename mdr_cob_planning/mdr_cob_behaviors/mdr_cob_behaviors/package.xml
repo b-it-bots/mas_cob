@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>mdr_behaviors</name>
+  <name>mdr_cob_behaviors</name>
   <version>1.2.0</version>
   <description>behaviors related package</description>
   <maintainer email="robotics@inf.h-brs.de">MAS robotics</maintainer>
