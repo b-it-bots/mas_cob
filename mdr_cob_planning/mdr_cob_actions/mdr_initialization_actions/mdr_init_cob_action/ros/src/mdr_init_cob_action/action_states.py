@@ -8,7 +8,7 @@ import moveit_commander
 from std_srvs.srv import Empty
 
 import simple_script_server
-from mdr_init_robot_action.msg import InitRobotGoal, InitRobotFeedback, InitRobotResult
+from mdr_init_cob_action.msg import InitRobotGoal, InitRobotFeedback, InitRobotResult
 
 class SetupInitRobot(smach.State):
     def __init__(self):

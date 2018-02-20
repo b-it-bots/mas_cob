@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>mdr_actions</name>
+  <name>mdr_cob_actions</name>
   <version>1.2.0</version>
   <description>Metapackage for action-related packages.</description>
 

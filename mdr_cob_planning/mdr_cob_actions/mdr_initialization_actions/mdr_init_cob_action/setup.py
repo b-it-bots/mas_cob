@@ -4,8 +4,8 @@ from distutils.core import setup
 from catkin_pkg.python_setup import generate_distutils_setup
 
 d = generate_distutils_setup(
-   packages=['mdr_init_robot_action'],
-   package_dir={'mdr_init_robot_action': 'ros/src/mdr_init_robot_action'}
+   packages=['mdr_init_cob_action'],
+   package_dir={'mdr_init_cob_action': 'ros/src/mdr_init_cob_action'}
 )
 
 setup(**d)

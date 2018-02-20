@@ -5,7 +5,7 @@ import rospy
 import roslib
 import actionlib
 
-from mdr_init_robot_action.msg import InitRobotAction, InitRobotGoal
+from mdr_init_cob_action.msg import InitRobotAction, InitRobotGoal
 
 def print_usage_info():
     print('usage: init_robot <component1> <component2> ... <componentN>' +

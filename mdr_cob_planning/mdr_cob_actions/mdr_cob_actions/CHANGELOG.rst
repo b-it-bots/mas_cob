@@ -1,5 +1,5 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package mdr_actions
+Changelog for package mdr_cob_actions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1.2.0 (2017-11-04)

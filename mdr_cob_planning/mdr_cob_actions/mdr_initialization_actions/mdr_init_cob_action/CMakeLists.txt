@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(mdr_init_robot_action)
+project(mdr_init_cob_action)
 
 find_package(catkin REQUIRED COMPONENTS
   actionlib
@@ -36,7 +36,7 @@ include_directories(
 )
 
 install(PROGRAMS
-  ros/scripts/init_robot_action
-  ros/scripts/init_robot_action_client_test
+  ros/scripts/init_cob_action
+  ros/scripts/init_cob_action_client_test
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/scripts
 )

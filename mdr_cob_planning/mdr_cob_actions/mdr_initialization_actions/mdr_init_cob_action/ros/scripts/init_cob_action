@@ -4,8 +4,8 @@ import smach
 
 from smach_ros import ActionServerWrapper, IntrospectionServer
 
-from mdr_init_robot_action.msg import InitRobotAction
-from mdr_init_robot_action.action_states import (SetupInitRobot, InitRobot,
+from mdr_init_cob_action.msg import InitRobotAction
+from mdr_init_cob_action.action_states import (SetupInitRobot, InitRobot,
                                                 SetActionLibResult)
 
 
