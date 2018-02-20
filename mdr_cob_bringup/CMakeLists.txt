@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(mdr_bringup)
+project(mdr_cob_bringup)
 find_package(catkin REQUIRED)
 
 catkin_package(
   CATKIN_DEPENDS
     mcr_default_env_config
     mcr_teleop
-    mdr_default_robot_config
     cob_bringup
     hokuyo_node
     robot_state_publisher
