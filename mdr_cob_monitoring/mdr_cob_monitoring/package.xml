@@ -1,5 +1,5 @@
 <package>
-  <name>mdr_monitoring</name>
+  <name>mdr_cob_monitoring</name>
   <version>1.2.0</version>
   <description>
     Metapackage for all monitoring packages in the MDR repository
