@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>mas_cob_kinematics</name>
+  <version>1.2.0</version>
+  <description>
+    Forward and inverse kinematics for different components of domestic service
+    robots.
+  </description>
+  <license>GPLv3</license>
+
+  <author email="sven.schneider@h-brs.de">Sven Schneider</author>
+  <maintainer email="robotics@inf.h-brs.de">MAS robotics</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
