@@ -3,7 +3,7 @@
 ######################### IMPORTS #########################
 
 import roslib
-roslib.load_manifest('mdr_common_states')
+roslib.load_manifest('mas_cob_common_states')
 import rospy
 import smach
 import smach_ros
@@ -15,11 +15,11 @@ import std_srvs.srv
 import std_msgs.msg
 import actionlib_msgs.msg
 
-from mdr_common_states.common_states import *
-from mdr_common_states.common_states_speech import *
-from mdr_common_states.common_states_search_people import *
-from mdr_common_states.common_states_face_recognition import *
-from mdr_common_states.common_states_navigation import *
+from mas_cob_common_states.common_states import *
+from mas_cob_common_states.common_states_speech import *
+from mas_cob_common_states.common_states_search_people import *
+from mas_cob_common_states.common_states_face_recognition import *
+from mas_cob_common_states.common_states_navigation import *
 
 ''' 
 	learn a person

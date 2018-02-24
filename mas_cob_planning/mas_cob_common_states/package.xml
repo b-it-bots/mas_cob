@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>mdr_common_states</name>
+  <name>mas_cob_common_states</name>
   <version>1.2.0</version>
   <description>common SMACH states among several scenarios</description>
 

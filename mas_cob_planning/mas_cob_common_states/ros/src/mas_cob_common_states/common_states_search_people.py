@@ -3,7 +3,7 @@
 ######################### IMPORTS #########################
 
 import roslib
-roslib.load_manifest('mdr_common_states')
+roslib.load_manifest('mas_cob_common_states')
 import rospy
 import smach
 import smach_ros
@@ -16,7 +16,7 @@ import actionlib_msgs.msg
 
 import mcr_perception_msgs.srv
 
-from mdr_common_states.common_states_speech import *
+from mas_cob_common_states.common_states_speech import *
 
 from simple_script_server import *
 sss = simple_script_server()

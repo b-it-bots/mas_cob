@@ -14,14 +14,14 @@ import actionlib_msgs.msg
 
 import mcr_perception_msgs.srv
 
-from mdr_common_states.common_states_face_recognition import *
-from mdr_common_states.common_states_follow_me import *
-from mdr_common_states.common_states_manipulation import *
-from mdr_common_states.common_states_navigation import *
-from mdr_common_states.common_states_object_perception import *
-from mdr_common_states.common_states_search_people import *
-from mdr_common_states.common_states_speech import *
-from mdr_common_states.common_states_carry_box import *
+from mas_cob_common_states.common_states_face_recognition import *
+from mas_cob_common_states.common_states_follow_me import *
+from mas_cob_common_states.common_states_manipulation import *
+from mas_cob_common_states.common_states_navigation import *
+from mas_cob_common_states.common_states_object_perception import *
+from mas_cob_common_states.common_states_search_people import *
+from mas_cob_common_states.common_states_speech import *
+from mas_cob_common_states.common_states_carry_box import *
 
 
 ######################### FUNCTION TO CHANGE THE COLOR OF THE COB LED'S #########################

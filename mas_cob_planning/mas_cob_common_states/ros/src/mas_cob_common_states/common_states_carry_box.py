@@ -18,7 +18,7 @@ sss = simple_script_server()
 import mcr_perception_msgs.msg
 #import mdr_manipulation_msgs.msg
 
-from mdr_common_states.common_states_speech import *
+from mas_cob_common_states.common_states_speech import *
 
 
 class detect_beer_box(smach.State):

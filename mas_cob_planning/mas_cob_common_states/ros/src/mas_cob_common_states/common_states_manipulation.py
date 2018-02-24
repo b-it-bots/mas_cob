@@ -17,7 +17,7 @@ import mdr_manipulation_msgs.srv
 import mdr_behavior_msgs.srv
 import moveit_commander
 
-from mdr_common_states.common_states_speech import *
+from mas_cob_common_states.common_states_speech import *
 
 
 class init_guiding(smach.State):

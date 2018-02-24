@@ -13,7 +13,7 @@ import actionlib_msgs.msg
 
 import mcr_perception_msgs.srv
 
-from mdr_common_states.common_states_speech import *
+from mas_cob_common_states.common_states_speech import *
 
 
 from simple_script_server import *
