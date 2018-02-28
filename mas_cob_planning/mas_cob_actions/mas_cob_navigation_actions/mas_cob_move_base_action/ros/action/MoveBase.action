@@ -1,0 +1,10 @@
+# goal definition
+string arm_safe_position
+string destination_location
+---
+# result definition
+bool success
+---
+# feedback
+string current_state
+string message

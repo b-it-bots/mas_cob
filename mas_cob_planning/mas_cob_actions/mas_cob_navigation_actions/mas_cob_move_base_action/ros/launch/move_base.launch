@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="mas_cob_move_base_action" type="move_base" name="move_base_server" output="screen" ns="mdr_actions" />
+</launch>
