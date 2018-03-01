@@ -15,19 +15,19 @@
   <build_depend>actionlib</build_depend>
   <build_depend>actionlib_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
-  <build_depend>mas_cob_lwr_kinematics</build_depend>
+  <build_depend>mas_lwr_kinematics</build_depend>
   <build_depend>roslint</build_depend>
   <build_depend>message_generation</build_depend>
 
   <run_depend>rospy</run_depend>
   <run_depend>actionlib</run_depend>
   <run_depend>actionlib_msgs</run_depend>
-  <run_depend>mas_cob_behavior_msgs</run_depend>
+  <run_depend>mdr_behavior_msgs</run_depend>
   <run_depend>moveit_msgs</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>tf</run_depend>
   <run_depend>cob_script_server</run_depend>
-  <run_depend>mas_cob_lwr_kinematics</run_depend>
+  <run_depend>mas_lwr_kinematics</run_depend>
   <run_depend>message_runtime</run_depend>
   <run_depend>geometry_msgs</run_depend>
 
