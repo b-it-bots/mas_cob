@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="mas_cob_place_action" type="place_action" name="place_server" respawn="false" output="screen">
+    	<remap from="joint_states" to="/joint_states" />
+    	<remap from="get_ik" to="/compute_ik" />
+
+    	<!-- the distance of the pre-grasp position to the object position (value given in meters) -->
+    	<param name="pre_grasp_distance" value="0.35" />
+
+    	<!-- how far to stop grasping before the object position (value given in meters) -->
+    	<param name="grasp_distance" value="0.15" />
+
+    	<!-- the distance over the object after the grasp (value given in meters) -->
+    	<param name="post_grasp_height" value="0.1" />
+    </node>
+
+</launch>
