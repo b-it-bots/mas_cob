@@ -7,6 +7,7 @@
         <param name="palm_link_name" value="/arm_7_link" />
         <param name="cartesian_velocity_topic" value="/arm_controller/cartesian_velocity_command" />
         <param name="base_vel_topic" value="/cmd_vel" />
+        <param name="odom_frame_name" value="/odom_combined" />
         <param name="arm_controller_sigma_values_topic" value="/arm_controller/sigma_values" />
         <param name="path_topic" value="/dmp_executor/path" />
         <param name="move_base_server" value="move_base" />
