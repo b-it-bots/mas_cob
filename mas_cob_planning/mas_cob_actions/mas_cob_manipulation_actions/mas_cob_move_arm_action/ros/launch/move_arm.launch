@@ -2,13 +2,12 @@
 <launch>
     <include file="$(find mas_cob_moveit)/launch/move_group.launch" />
     <include file="$(find mas_cob_arm_cartesian_control)/ros/launch/cob_arm_cartesian_control.launch" />
-    <include file="$(find mas_cob_joint_velocity_control)/ros/launch/joint_velocity_control.launch" />
     <node pkg="mdr_move_arm_action" type="move_arm_action" name="move_arm_server" output="screen">
         <param name="arm_name" value="arm" />
-        <param name="palm_link_name" value="/sdh_palm_link" />
-        <param name="cartesian_velocity_topic" value="/arm_1/arm_controller/cartesian_velocity_command" />
+        <param name="palm_link_name" value="/arm_7_link" />
+        <param name="cartesian_velocity_topic" value="/arm_controller/cartesian_velocity_command" />
         <param name="base_vel_topic" value="/cmd_vel" />
-        <param name="arm_controller_sigma_values_topic" value="/arm_1/arm_controller/sigma_values" />
+        <param name="arm_controller_sigma_values_topic" value="/arm_controller/sigma_values" />
         <param name="path_topic" value="/dmp_executor/path" />
         <param name="move_base_server" value="move_base" />
     </node>
