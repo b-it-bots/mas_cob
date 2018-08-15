@@ -3,6 +3,9 @@
     <node pkg="mcr_arm_cartesian_control" type="arm_cartesian_control" ns="mcr_manipulation" name="mcr_arm_cartesian_control" output="screen" respawn="false">
       <param name="root_name" value="arm_0_link"/>
       <param name="tip_name" value="arm_7_link"/>
+      <param name="joint_state_topic" value="/joint_states"/>
       <remap from="~joint_velocity_command" to="/arm_controller/command_vel"/>
+      <remap from="~cartesian_velocity_command" to="/arm_controller/cartesian_velocity_command"/>
+      <remap from="~sigma_values" to="/arm_controller/sigma_values"/>
     </node>
 </launch>
