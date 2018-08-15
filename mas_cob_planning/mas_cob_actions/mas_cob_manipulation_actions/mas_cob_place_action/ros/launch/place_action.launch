@@ -1,18 +1,13 @@
 <?xml version="1.0"?>
 <launch>
-
-    <node pkg="mas_cob_place_action" type="place_action" name="place_server" respawn="false" output="screen">
-    	<remap from="joint_states" to="/joint_states" />
-    	<remap from="get_ik" to="/compute_ik" />
-
-    	<!-- the distance of the pre-grasp position to the object position (value given in meters) -->
-    	<param name="pre_grasp_distance" value="0.35" />
-
-    	<!-- how far to stop grasping before the object position (value given in meters) -->
-    	<param name="grasp_distance" value="0.15" />
-
-    	<!-- the distance over the object after the grasp (value given in meters) -->
-    	<param name="post_grasp_height" value="0.1" />
+    <node pkg="mdr_place_action" type="place_action" name="place_server" output="screen">
+        <param name="move_arm_server" value="move_arm_server" />
+        <param name="move_base_server" value="move_base_server" />
+        <param name="gripper_controller_pkg_name" value="mas_cob_gripper_controller" />
+        <param name="preplace_config_name" value="pregrasp" />
+        <param name="safe_arm_joint_config" value="folded" />
+        <param name="base_elbow_offset" value="0.078" />
+        <param name="placing_dmp" value="$(find mdr_place_action)/config/trajectory_weights/weights_table_place.yaml" />
+        <param name="dmp_tau" value="30" />
     </node>
-
 </launch>
