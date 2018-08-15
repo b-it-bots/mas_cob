@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   mdr_enter_door_action
   mdr_introduce_self_action
-  mdr_move_base_safe
+  mdr_move_base_action
   mdr_move_tray_action
 )
 
@@ -27,7 +27,7 @@ catkin_package(
     mdr_bringup
     mdr_2dnav
     mdr_question_matching
-    mdr_move_base_safe
+    mdr_move_base_action
     mdr_enter_door_action
     mdr_introduce_self_action
     mdr_move_tray_action
