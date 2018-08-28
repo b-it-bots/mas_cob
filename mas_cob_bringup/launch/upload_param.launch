@@ -11,4 +11,18 @@
     <rosparam command="load" ns="/script_server/light" file="$(find mas_cob_bringup)/config/cob3-1/light_configurations.yaml"/>
     <rosparam command="load" ns="/script_server/sound" file="$(find mas_cob_bringup)/config/cob3-1/sound_configurations.yaml"/>
 
+
+    <group ns="/script_server">
+        <group if="$(arg domestic_domain)">
+            <!-- send NAMES parameters to parameter server -->
+            <rosparam command="load" file="$(find mas_cob_bringup)/config/speech_names.yaml"/>
+            <!-- send PLACES parameters to parameter server -->
+            <rosparam command="load" file="$(find mas_cob_bringup)/config/speech_places.yaml"/>
+            <!-- send ACTION parameters to parameter server -->
+            <rosparam command="load" file="$(find mas_cob_bringup)/config/speech_actions.yaml"/>
+            <!-- send OBJECTS parameters to parameter server -->
+            <rosparam command="load" file="$(find mas_cob_bringup)/config/speech_objects.yaml"/>
+        </group>
+  </group>
+
 </launch>
